@@ -12,6 +12,7 @@ import android.widget.Toast
 
 class MainPresenter<V: OnMainMVP.View, I:OnMainMVP.Interactor>: OnMainMVP.Presenter<V,I>{
 
+    //variables
     lateinit var mView: OnMainMVP.View
     lateinit var mInteractor: OnMainMVP.Interactor
     lateinit var baseContext: Context
@@ -45,7 +46,7 @@ class MainPresenter<V: OnMainMVP.View, I:OnMainMVP.Interactor>: OnMainMVP.Presen
         return mInteractor as I
     }
 
-    //log commit
+
     override fun callView() {
         getView().startActivity()
     }
