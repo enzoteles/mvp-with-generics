@@ -45,7 +45,7 @@ class MainPresenter<V: OnMainMVP.View, I:OnMainMVP.Interactor>: OnMainMVP.Presen
         return mInteractor as I
     }
 
-
+    //log commit
     override fun callView() {
         getView().startActivity()
     }
