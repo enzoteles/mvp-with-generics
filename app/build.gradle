@@ -23,7 +23,7 @@ android {
     }
 
     sourceSets {
-        main.res.srcDirs = ['src/main/res', file('src/main/layouts').listFiles()]
+        main.res.srcDirs = ['src/main/res', 'src/main/res/layouts', file('src/main/res/layouts').listFiles()]
     }
 
 }
