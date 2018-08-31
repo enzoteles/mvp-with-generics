@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "br.com.gradle.line"
         minSdkVersion 15
@@ -20,7 +21,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildToolsVersion '27.0.3'
+
+    sourceSets {
+        main.res.srcDirs = ['src/main/res', file('src/main/layouts').listFiles()]
+    }
+
 }
 
 dependencies {
